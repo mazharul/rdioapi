@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+
+Route::get('/artists/{mbid}/top-tracks', function($mbid){
+    return view('topTracksByArtist')->with('mbid', $mbid);
 });

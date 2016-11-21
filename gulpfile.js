@@ -13,7 +13,26 @@ require('laravel-elixir-vue-2');
  |
  */
 
-elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+elixir(function(mix){
+   mix.copy(
+       'public/bower_components/bootstrap/dist/css/bootstrap.min.css',
+       'public/css/bootstrap.min.css'
+   ),
+   mix.copy(
+       'bower_components/jquery-typeahead/dist/jquery.typeahead.min.css',
+       'public/css/jquery.typeahead.min.css'
+   ),
+   mix.copy(
+       'public/bower_components/bootstrap/dist/js/bootstrap.min.js',
+       'public/js/bootstrap.min.js'
+   ),
+   mix.copy(
+       'bower_components/jquery-typeahead/dist/jquery.typeahead.min.js',
+       'public/js/jquery.typeahead.min.js'
+   ),
+   mix.copy(
+       'bower_components/jquery-typeahead/dist/jquery.min.js',
+       'public/js/jquery.min.js'
+   )
+
 });

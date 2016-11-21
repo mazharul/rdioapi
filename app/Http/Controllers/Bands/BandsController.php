@@ -69,4 +69,5 @@ class BandsController extends Controller
         return response($formatted_response)
             ->header('content-Type', 'json');
     }
+
 }
